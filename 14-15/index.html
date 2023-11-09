@@ -1,0 +1,120 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        function sh()
+        {
+            var head = document.getElementById('text1');
+            var text = document.getElementById('text2');
+
+            var arthas = document.getElementById('arthas');
+            var subzero = document.getElementById('subzero');
+            var kenshiro = document.getElementById('kenshiro');
+            var n1 = document.getElementById('1');
+            var n22 = document.getElementById('22');
+            var n23 = document.getElementById('23');
+            var curs = document.getElementById('curs');
+            var und = document.getElementById('und');
+            var fat = document.getElementById('fat');
+            t1=head.value;
+            t2=text.value;
+            var strh1 = "<h1>"+t1+"</h1><hr><P>";
+            var strh2 = "<h1>"+t2+"</h1><hr><P>";
+
+            if (arthas.selected) img = '<IMG src="32.png">';
+            if (subzero.selected) img = '<IMG src="31.png">';
+            if (kenshiro.selected) img = '<IMG src="3.png">';
+
+            if (n1.checked) st="<head><style> body {background-image: url('1.jpg'); background-size: cover;";
+            if (n22.checked) st="<head><style> body {background-image: url('22.png'); background-size: cover;";
+            if (n23.checked) st="<head><style> body {background-image: url('23.png'); background-size: cover;";
+
+            if (curs.checked) st1=st+"font-style: italic};";
+            if (und.checked) st1=st+"text-decoration: underline};";
+            if (fat.checked) st1=st+"font-weight: bold}; ";
+
+            st2=st1+"</style></head>"
+            
+            var win=window.open("","","width=1000,height=1000");
+            win.document.open();
+
+            win.document.write(st2);  
+            win.document.write(strh1);
+            win.document.write(img);
+            win.document.write(strh2);
+
+            cls ='<input type="button" value="закрыть"' +'onClick="window.close();">';
+            win.document.write(cls);
+
+            win.document.close();
+        }
+
+
+    </script>
+</head>
+
+    <body>
+        <script>
+            function res()
+            {
+                document.getElementById('text1').value = "";
+                document.getElementById('text2').value = "";
+                document.getElementById('1').checked = false;
+                document.getElementById('22').checked = false;
+                document.getElementById('23').checked = false;
+                document.getElementById('arthas').false;
+                document.getElementById('subzero').false;
+                document.getElementById('kenshiro').false;
+                document.getElementById('curs').checked = false;
+                document.getElementById('und').checked = false;
+                document.getElementById('fat').checked = false;
+
+            }
+        </script>
+
+        <h1 id="header1">Страничка по персонажу</h1>
+        <table class="tab">
+            <tr>
+                <td>Персонаж</td>
+                <td colspan="3">
+                    <select id="text1" class="divs">
+                        <option id='arthas'>Артас</option>
+                        <option id='subzero'>Саб-Зиро</option>
+                        <option id='kenshiro'>Кенширо</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>Подпись</td>
+                <td colspan="3"><input type="text" id="text2" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td colspan="2">Картинка для фона</td>
+                <td colspan="2">Форматирование текста</td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="1"></td>  
+                <td>#1.png</td>
+                <td><input type="checkbox" id="curs"></td>  
+                <td>Курсив</td>   
+            </tr>
+            <tr>
+                <td><input type="radio" id="22"></td>
+                <td>#22.png</td>
+                <td><input type="checkbox" id="und"></td>
+                <td>Подчеркивание</td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="23"></td>
+                <td>#23.png</td>
+                <td><input type="checkbox" id="fat"></td>
+                <td>Жирный</td>
+            </tr>
+            <tr>
+                
+                <td colspan="2"><input type="reset" id="reset" value="Сброс" onClick="res()"></td>
+                <td colspan="2"><input type="button" id="show" value="Показать" onClick="sh()" ></td>
+            </tr>
+		</table>
+
+    </body>
+    

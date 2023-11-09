@@ -1,0 +1,82 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        function sh()
+        {
+            var text1 = document.getElementById('text1');
+            var text2 = document.getElementById('text2');
+            var text3 = document.getElementById('text3');
+            var text4 = document.getElementById('text4');
+            var text5 = document.getElementById('text5');
+            var text6 = document.getElementById('text6');
+            var text7 = document.getElementById('text7');
+
+            t1=text1.value;
+            t2=text2.value;
+            t3=text3.value;
+            t4=text4.value;
+            t5=text5.value;
+            t6=text6.value;
+            t7=text7.value;
+            h1='О себе'
+            var strh1 = "<h1>"+h1+"</h1><hr><P>";
+            var strh2 = "<div>  Я, "+t1+" "+t2+" "+t3+", родился в "+t4+" году в городе "+t5+".</div><br></br><div>Больше всего я люблю "+t6+" и не люблю "+t7+". Было бы замечательно, если бы всю жизнь я мог только "+t6+", но все же иногда приходится "+t7+".</div><hr><P>";
+            
+            var win=window.open("","","width=1000,height=1000");
+            win.document.open();
+
+            win.document.write(strh1);
+            win.document.write(strh2);
+
+            cls ='<input type="button" value="закрыть"' +'onClick="window.close();">';
+            win.document.write(cls);
+
+            win.document.close();
+        }
+
+
+    </script>
+</head>
+
+    <body>
+
+        <h1 id="header1">Анкета</h1>
+        <hr>
+        <table class="tab">
+            <tr>
+                <td>Фамилия:</td>
+                <td><input type="text" id="text1" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Имя:</td>
+                <td><input type="text" id="text2" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Отчество:</td>
+                <td><input type="text" id="text3" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Год рождения:</td>
+                <td><input type="text" id="text4" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Место рождения:</td>
+                <td><input type="text" id="text5" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Любимое занятие:</td>
+                <td><input type="text" id="text6" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Нелюбимое занятие:</td>
+                <td><input type="text" id="text7" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="show" value="Сформировать биографию" onClick="sh()" class="butt" ></input></td>
+            </tr>
+		</table>
+        <hr>
+
+    </body>
+    

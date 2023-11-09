@@ -1,0 +1,86 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        function sh()
+        {
+            var text1 = document.getElementById('text1');
+            var text2 = document.getElementById('text2');
+            var text3 = document.getElementById('text3');
+            var text4 = document.getElementById('text4');
+            var text5 = document.getElementById('text5');
+
+            t1=text1.value;
+            t2=text2.value;
+            t3=text3.value;
+            t4=text4.value;
+            t5=text5.value;
+
+            h1= t1+" и "+t2;
+            var strh1 = "<h1>"+h1+"</h1><hr><P>";
+            var strh2 = "<div>  -Проклятье, "+t2+"! Как будущий "+t4+", я приказываю очистить этот город от солдат  "+t3+"!</div>";
+            var strh3 = "<div>  -Ты еще не "+t4+", юноша, но этот приказ я не выполнил бы, будь ты хоть трижды "+t5+"!</div>";
+            var strh4 = "<div>  -Что ж... Тогда я должен расценивать это, как измену...</div>";
+            var strh5 = "<div>  -Измену?! "+t1+", ты совсем лишился рассудка?!</div>";
+            var strh6 = "<div>  -Да? Лорд "+t2+", властью данной мне, по праву рождения я отстраняю тебя от службы, и освобождаю твоих рыцарей!</div>";
+            var strh7 = "<div>  -"+t1+", ты же не можешь просто...</div>";
+            var strh8 = "<div>  -Это уже сделано! Теперь, те кто действительно хочет спасти эту землю - оставайтесь. Остальные - убирайтесь с глаз!!!</div><hr><P>";
+                
+                
+            // </div><hr><P>";
+            
+            var win=window.open("","","width=1000,height=1000");
+            win.document.open();
+
+            win.document.write(strh1);
+            win.document.write(strh2);
+            win.document.write(strh3);
+            win.document.write(strh4);
+            win.document.write(strh5);
+            win.document.write(strh6);
+            win.document.write(strh7);
+            win.document.write(strh8);
+
+            cls ='<input type="button" value="закрыть"' +'onClick="window.close();">';
+            win.document.write(cls);
+
+            win.document.close();
+        }
+
+
+    </script>
+</head>
+
+    <body>
+
+        <h1 id="header1">Генератор очищения Стратхольма</h1>
+        <hr>
+        <table class="tab">
+            <tr>
+                <td>Имя героя:</td>
+                <td><input type="text" id="text1" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Друг героя:</td>
+                <td><input type="text" id="text2" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Враг героев (Родительный падеж):</td>
+                <td><input type="text" id="text3" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Кем хочет быть герой:</td>
+                <td><input type="text" id="text4" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td>Творительный падеж пред. пункта:</td>
+                <td><input type="text" id="text5" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" id="show" value="Сгенерировать очищение" onClick="sh()" class="butt" ></input></td>
+            </tr>
+		</table>
+        <hr>
+
+    </body>
+    
