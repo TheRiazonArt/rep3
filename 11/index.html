@@ -1,0 +1,35 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        i=0; 
+        function gip() 
+        { 
+            x = document.getElementById('inputx').value;
+            y = document.getElementById('inputy').value;
+            z = x*y
+            alert(z);
+        }
+    </script>
+
+</head>
+    <body>
+        <h1> Площадь прямоугольника </h1>
+        <hr>
+
+        <table>
+            <tr>
+                <td><div class="divs">Длина:</div></td>
+                <td><input id="inputx"></input></td>
+            </tr>
+            <tr>
+                <td><div class="divs">Ширина:</div></td>
+                <td><input id="inputy"></input></td>
+            </tr>
+        </table>
+        
+        <br></br>
+        <input class="butt" type="button" value="Площадь" onClick="gip();">
+        <hr>
+    </body>
+    

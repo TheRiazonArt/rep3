@@ -1,0 +1,28 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        i=0; 
+        function gip() 
+        { 
+            x = document.getElementById('inputx').value;
+            y = document.getElementById('inputy').value;
+            z = Math.sqrt(x*x + y*y)
+            alert(z);
+        }
+    </script>
+
+</head>
+    <body>
+        <h1> Расстояние от точки до начала координат </h1>
+        <hr>
+        <div class="divs">X:</div>
+        <input id="inputx"></input>
+        <br></br>
+        <div class="divs">Y:</div>
+        <input id="inputy"></input>
+        <br></br>
+        <input class="butt" type="button" value="Расстояние" onClick="gip();">
+        <hr>
+    </body>
+    

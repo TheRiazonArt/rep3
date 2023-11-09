@@ -1,0 +1,23 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        i=0; 
+        function slideShow() 
+        { 
+            ris = new Array('ae86.jpg', 'mx5.jpg', 'fc3s.jpg', 'fd3s.jpg'); 
+            if (i >= 4)   i = 0;
+            r=document.getElementById('slide') 
+            r.src=ris[i];   
+            i++;
+        }
+    </script>
+
+</head>
+    <body>
+        <h1> Слайд-шоу </h1>
+        <img id='slide'  src="корчи.jpg" />
+        <br></br>
+        <input type="button" value="Показать следующую" onClick="slideShow();">
+    </body>
+    

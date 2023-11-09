@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Gotham";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: url(fonts/gothampro.ttf); /* Путь к файлу со шрифтом */
+}
+
+body {
+    display:inline-block;
+    background: #98e9ff;
+    color: rgb(0, 5, 104);
+  }
+
+h1 {
+  margin-left: 10%;
+}
+
+.divs{
+  position:fixed;
+}
+.divs1{
+  margin-left: 360px;
+  margin-top: 10px;
+  position:fixed;
+}
+.divs2{
+  margin-left: 410px;
+  position:fixed;
+}

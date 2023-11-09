@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+		<script>
+			function dates()
+			{
+				var today = new Date();
+				var day = 
+				[
+					"понедельник",
+					"вторник",
+					"среда",
+					"четверг",
+					"пятница",
+					"суббота",
+					"воскресенье",
+				];
+				var month = 
+				[
+					"января",
+					"Февраля",
+					"марта",
+					"апреля",
+					"мая",
+					"июня",
+					"июля",
+					"августа",
+					"сентября",
+					"октября",
+					"ноября",
+					"декабря"
+				];
+				document.getElementById('Date').textContent = "Сегодня " + today.getDate() + " " + month[today.getMonth()] + " " + today.getFullYear() + " года, " + day[today.getDay()-1];
+			}
+		</script>
+	</head>
+	<body onLoad="dates()">
+		<h1><p id="Date"></p></h1>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+	</head>
+	<body onLoad="dates()">
+		<script>
+			function dates()
+			{
+				var mydate = new Date(2023, 12-1, 28+1);
+				var today = new Date();
+				var s = (Number(mydate) - Number(today)) / 1000 / 60 / 60 / 24;
+				p1=document.getElementById('Date');
+            	p1.value = parseInt(s);
+			}
+		</script>
+		<h1><div class="divs">До каникул осталось </div> <input type="text" id="Date" size="1" class="divs1"></input> <div class="divs2"> дней</div> </h1>
+	</body>
+</html>

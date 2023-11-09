@@ -1,0 +1,125 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        function sh()
+        {
+            var head = document.getElementById('header1');
+            var text = document.getElementById('text1');
+            var c6 = document.getElementById('c6plus');
+            var fd = document.getElementById('fd3s');
+            var seb = document.getElementById('seba');
+            var c1 = document.getElementById('c1');
+            var c2 = document.getElementById('c2');
+            var c3 = document.getElementById('c3');
+            var br = document.getElementById('brown');
+            var wh = document.getElementById('white');
+            var bl = document.getElementById('black');
+            t1=head.value;
+            t2=text.value;
+            var strh1 = "<h1>"+t1+"</h1><hr><P>";
+            var strh2 = "<h1>"+t2+"</h1><hr><P>";
+
+            if (br.checked) st="<head><style> body {color: #af6300;";
+            if (wh.checked) st="<head><style> body {color: #ffffff;";
+            if (bl.checked) st="<head><style> body {color: #000000;";
+
+            if (c1.selected) st1=st+" background: #EFD1FF; }</style></head>"
+            if (c2.selected) st1=st+" background: #A8F0FF; }</style></head>"
+            if (c3.selected) st1=st+" background: #A8FFA8; }</style></head>"
+
+            if (c6.checked) img = '<IMG src="c6plus.png">';
+            if (fd3s.checked) img = '<IMG src="fd3s.png">';
+            if (seba.checked) img = '<IMG src="sebaendless.png">';
+            
+            var win=window.open("","","width=1000,height=1000");
+            win.document.open();
+
+            win.document.write(st1);  
+            win.document.write(strh1);
+            win.document.write(img);
+            win.document.write(strh2);
+            cls ='<input type="button" value="закрыть"' +'onClick="window.close();">';
+            win.document.write(cls);
+
+            win.document.close();
+        }
+
+
+    </script>
+</head>
+
+    <body>
+        <script>
+            function res()
+            {
+                document.getElementById('header1').value = "";
+                document.getElementById('text1').value = "";
+                document.getElementById('c6plus').checked = false;
+                document.getElementById('fd3s').checked = false;
+                document.getElementById('seba').checked = false;
+                document.getElementById('c1').false;
+                document.getElementById('c2').false;
+                document.getElementById('c3').false;
+                document.getElementById('brown').checked = false;
+                document.getElementById('white').checked = false;
+                document.getElementById('black').checked = false;
+
+            }
+        </script>
+
+        <h1>Страничка по заказу</h1>
+        <div class="divs">Заголовок </div> <input type="text" id="header1" class="divs"></input>
+
+        <table class="tab">
+            <tr>
+                <td rowspan="3">Картинка</td>
+                <td><input type="checkbox" id="c6plus"></td>
+                <td>Schecter C6-Plus</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="fd3s"></td>
+                <td>Mazda RX-7 FD3S</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" id="seba"></td>
+                <td>Seba FR1 + Endless</td>
+              </tr>
+		</table>
+
+        <div class="divs">Подпись </div> <input type="text" id="text1" class="divs1"></input>
+
+        <table class="tab">
+            <tr>
+                <td>Цвет фона</td>
+                <td></td>
+                <td>Цвет текста</td>
+            </tr>
+            <tr>
+                <td rowspan="3">
+                    <select>
+                        <option id='c1'>Розовый</option>
+                        <option id='c2'>Голубой</option>
+                        <option id='c3'>Зеленый</option>
+                    </select>
+                </td>       
+                <td class="td1"></td>             
+                <td><input type="radio" id="brown"></td>
+            </tr>
+            <tr>
+                <td class="td2"></td>
+                <td><input type="radio" id="white"></td>
+            </tr>
+            <tr>
+                <td class="td3"></td>
+                <td><input type="radio" id="black"></td>
+            </tr>
+            <tr>
+                <td><input type="reset" id="reset" value="Сброс" onClick="res()"></td>
+                <td></td>
+                <td><input type="button" id="show" value="Показать" onClick="sh()"></td>
+            </tr>
+		</table>
+
+    </body>
+    

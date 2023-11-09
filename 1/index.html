@@ -1,0 +1,48 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        function ae86()
+        {
+            p1=document.getElementById('f1');
+            p1.value= "Toyota AE86 10.000$";
+        }
+        function mx5()
+        {
+            p1=document.getElementById('f1');
+            p1.value= "Mazda Miata MX-5 15.000$";
+        }
+        function fc3s()
+        {
+            p1=document.getElementById('f1');
+            p1.value= "Mazda RX-7 FC3S 7.000$";
+        }
+        function fd3s()
+        {
+            p1=document.getElementById('f1');
+            p1.value= "Mazda RX-7 FD3S 20.000$";
+        }
+        function Clear()
+        {
+            p1=document.getElementById('f1');
+            p1.value = " ";
+        }
+    </script>
+
+</head>
+    <body>
+        <h1> Продаются автомобили </h1>
+        <table border="1">
+			<tr>
+			 <td><img src="ae86.jpg" id="ae86" onmouseover="ae86();" onmouseout="Clear();"></td>
+			 <td><img src="mx5.jpg" id="mx5" onmouseover="mx5();" onmouseout="Clear();"></td>
+			</tr>
+			<tr>
+			 <td><img src="fc3s.jpg" id="fc3s" onmouseover="fc3s();" onmouseout="Clear();"></td>
+			 <td><img src="fd3s.jpg" id="fd3s" onmouseover="fd3s();" onmouseout="Clear();"></td>
+		   </tr>
+		</table>
+        <br></br>
+        <input type='text' id='f1' size=26>
+    </body>
+    

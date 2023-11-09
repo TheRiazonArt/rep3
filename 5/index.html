@@ -1,0 +1,55 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        function schet()
+        {
+            var st1=prompt("Введите первое число:","0")
+            var znak=prompt("Введите знак (+, -, *, /):")
+            var st2=prompt("Введите второе число:","0")
+            var x=parseInt(st1);
+            var y=parseInt(st2);
+            var s = 0.0;
+            
+            if (znak == "+") 
+                summ(x, y)
+            else if (znak == "-")
+                minus(x, y)
+            else if (znak == "/")
+                if (y == 0)
+                    alert("Нельзя делить на ноль")
+                else
+                    del(x, y)
+            else if (znak == "*")
+                proizv(x, y)
+            else
+                alert("Неверный знак")
+        }
+
+        function summ(x, y)
+        {
+            s=x+y;
+            alert("Сумма равна "+s);
+        }
+        function minus(x, y)
+        {
+            s=x-y;
+            alert("Разность равна "+s);
+        }
+        function del(x, y)
+        {
+            s=x/y;
+            alert("Результат деления равен "+s);
+        }
+        function proizv(x, y)
+        {
+            s=x*y;
+            alert("Произведение равно "+s);
+        }
+    </script>
+</head>
+
+<body>
+    <input type='button' value='Считать' onClick="schet()">
+</body>
+    

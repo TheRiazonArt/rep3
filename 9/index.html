@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+		<script>
+			function dates()
+			{
+				var myy = prompt('Введите год рождения');
+				var mym = prompt('Введите месяц рождения')-1;
+				var myd = prompt('Введите день рождения');
+				var today = new Date(myy, mym, myd);
+				var day = 
+				[
+					"понедельник",
+					"вторник",
+					"среда",
+					"четверг",
+					"пятница",
+					"суббота",
+					"воскресенье",
+				];
+				var month = 
+				[
+					"января",
+					"Февраля",
+					"марта",
+					"апреля",
+					"мая",
+					"июня",
+					"июля",
+					"августа",
+					"сентября",
+					"октября",
+					"ноября",
+					"декабря"
+				];
+				document.getElementById('Date').textContent = "Я родился " + today.getDate() + " " + month[today.getMonth()] + " " + today.getFullYear() + " года, " + day[today.getDay()-1];
+			}
+		</script>
+	</head>
+	<body onLoad="dates()">
+		<h1><p id="Date"></p></h1>
+	</body>
+</html>

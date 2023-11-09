@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen">
+	</head>
+	<body onLoad="dates()">
+		<script>
+			function dates()
+			{
+				var myy = prompt('Введите год рождения');
+				var mym = prompt('Введите месяц рождения');
+				var myd = prompt('Введите день рождения');
+				var mydate = new Date(myy, mym, myd);
+				var today = new Date();
+				var s = (Number(today) - Number(mydate)) / 1000 / 60 / 60 / 24;
+				p1=document.getElementById('Date');
+            	p1.value = parseInt(s);
+			}
+		</script>
+		<h1><div class="divs">Я прожил всего </div> <input type="text" id="Date" size="1" class="divs1"></input> <div class="divs2"> дней</div> </h1>
+	</body>
+</html>

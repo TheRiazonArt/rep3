@@ -1,0 +1,65 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        function ae86()
+        {
+            p1=document.getElementById('korch');
+            p1.src= "ae86.jpg"
+        }
+        function mx5()
+        {
+            p1=document.getElementById('korch');
+            p1.src= "mx5.jpg"
+        }
+        function fc3s()
+        {
+            p1=document.getElementById('korch');
+            p1.src= "fc3s.jpg"
+        }
+        function fd3s()
+        {
+            p1=document.getElementById('korch');
+            p1.src= "fd3s.jpg"
+        }
+        function Clear()
+        {
+            p1=document.getElementById('korch');
+            p1.src= "корчи.jpg"
+        }
+    </script>
+
+</head>
+    <body>
+        <h1>Наведи курсор на название автомобиля</h1>
+
+        <table border="1">
+            <tr>
+                <td><p id="ae86">TOYOTA AE86</p></td>
+                <td rowspan="4"><img src="корчи.jpg" id="korch"></td>
+              </tr>
+              <tr>
+                <td><p id="fc3s">MAZDA RX-7 FC3S</p></td>
+              </tr>
+              <tr>
+                <td><p id="fd3s">MAZDA RX-7 FD3S</p></td>
+              </tr>
+              <tr>
+                <td><p id="mx5">MAZDA MIATA MX-5</p></td>
+              </tr>
+		</table>
+
+        <br></br>
+        <script>
+            document.getElementById('ae86').addEventListener("mouseover", ae86);
+            document.getElementById('fc3s').addEventListener("mouseover", fc3s);
+            document.getElementById('fd3s').addEventListener("mouseover", fd3s);
+            document.getElementById('mx5').addEventListener("mouseover", mx5);
+
+            document.getElementById('ae86').addEventListener("mouseout", Clear);
+            document.getElementById('fc3s').addEventListener("mouseout", Clear);
+            document.getElementById('fd3s').addEventListener("mouseout", Clear);
+            document.getElementById('mx5').addEventListener("mouseout", Clear);
+        </script>
+    </body>
+    
