@@ -4,6 +4,9 @@
   font-weight: 400;
   /* Браузер сначала попробует найти шрифт локально */
   src: url(fonts/gothampro.ttf); /* Путь к файлу со шрифтом */
+  src: url(fonts/gothampro_bold.ttf); /* Путь к файлу со шрифтом */
+  src: url(fonts/gothampro_italic.ttf); /* Путь к файлу со шрифтом */
+  src: url(fonts/gothampro_medium.ttf); /* Путь к файлу со шрифтом */
 }
 
 body {
