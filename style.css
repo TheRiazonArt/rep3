@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "GothamPro";
-  font-style: normal;
+  font-family: "Gotham Pro Black";
+  font-style: Regular;
   font-weight: 400;
   /* Браузер сначала попробует найти шрифт локально */
   src: url(fonts/gothampro.ttf); /* Путь к файлу со шрифтом */
